@@ -1,0 +1,81 @@
+<%- include("partials/header"); -%>
+
+<div class="home">
+  <h1>DAILY JOURNAL</h1>
+  <p><%= homepara %></p>
+</div>
+
+<div class="art">
+  <div class="content">
+    <h3><i class="material-icons arrow">&#xE5C8;</i>Be challenged and encouraged with our featured article</h3>
+    <br><br>
+    <p><%= featuredArticle %></p>
+  </div>
+  <div class="card">
+    <h3>The Rise of AI</h3>
+    <br>
+    <p>Artificial Intelligence (AI) has emerged as a groundbreaking force, revolutionizing the tech landscape and paving the way for incredible advancements. With its ability to learn, reason, and adapt, AI is reshaping <span style="all: initial;">...</span></p>
+    <a href="/feature">Keep Reading</a>
+  </div>
+</div>
+
+<div class="post-container">
+  <% newitems.forEach(function (post) { %>
+    <div class="post-card">
+      <h1><%= post.name %></h1>
+      <p style="color: #B78B08;"><%= currentDate %></p>
+      <p><%= post.body.substring(0, 100) + " ..." %></p>
+      <a href="/post/<%= post._id %>">Read More<i class="material-icons red-arrow">&#xE5C8;</i></a>
+    </div>
+  <% }); %>
+</div>
+
+<div class="pagination">
+  <% if (current > 1) { %>
+    <a href="/?page=<%= parseInt(current) - 1 %>">Previous</a>
+  <% } %>
+
+  <% let startPage, endPage; %>
+  <% if (pages <= 2) { %>
+    <% startPage = 1; %>
+    <% endPage = pages; %>
+  <% } else if (current <= 2) { %>
+    <% startPage = 1; %>
+    <% endPage = 2; %>
+  <% } else if (current >= pages - 1) { %>
+    <% startPage = pages - 1; %>
+    <% endPage = pages; %>
+  <% } else { %>
+    <% startPage = current - 1; %>
+    <% endPage = current; %>
+  <% } %>
+
+  <% if (startPage > 1) { %>
+    <a href="/?page=1">1</a>
+    <% if (startPage > 2) { %>
+      <span class="ellipsis">...</span>
+    <% } %>
+  <% } %>
+
+  <% for (let i = startPage; i <= endPage; i++) { %>
+    <% if (i === current) { %>
+      <span class="current-page"><%= i %></span>
+    <% } else { %>
+      <a href="/?page=<%= i %>"><%= i %></a>
+    <% } %>
+  <% } %>
+
+  <% if (endPage < pages) { %>
+    <% if (endPage < pages - 1) { %>
+      <span class="ellipsis">...</span>
+    <% } %>
+    <a href="/?page=<%= pages %>"><%= pages %></a>
+  <% } %>
+
+  <% if (current < pages) { %>
+    <a href="/?page=<%= parseInt(current) + 1 %>">Next</a>
+  <% } %>
+</div>
+
+
+<%- include("partials/footer"); -%>

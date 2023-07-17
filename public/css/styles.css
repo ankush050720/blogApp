@@ -1,0 +1,400 @@
+/* Default styles */
+
+html {
+  min-height: 100%;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+.container-fluid {
+  padding: 0;
+  margin: 0;
+}
+
+.navbar {
+  padding: 35px;
+  background-color: #f7f7f7;
+  color: #333;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+.navbar-brand {
+  max-width: 300px;
+  height: auto;
+}
+
+.navbar-nav {
+  margin-top: 28px;
+  margin-right: 50px;
+}
+
+.navbar-nav li {
+  position: relative;
+}
+
+.navbar-nav li a {
+  color: #333;
+  position: relative;
+  font-size: 16px;
+  left: 10px;
+  top: 5px;
+  z-index: 1;
+}
+
+.navbar-nav li a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #e1be5e;
+  opacity: 0;
+  transition: none;
+}
+
+.navbar-nav li a:hover::before {
+  opacity: 0.3;
+}
+
+.home {
+  margin-top: 0;
+  color: white;
+  background-image: url('https://th.bing.com/th/id/R.81f68ed287bb4ed0fd6970bec83e2354?rik=0xR6WxsCrU08DQ&pid=ImgRaw&r=0');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  padding-left: 175px;
+  padding-top: 30px;
+}
+
+.home h1 {
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.home p {
+  font-family: 'Arial', sans-serif;
+  font-size: 27px;
+  line-height: 2.7;
+  font-weight: normal;
+  letter-spacing: 2px;
+}
+
+.art {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 175px;
+  padding-top: 50px;
+  height: 400px;
+  background-color: #f7f7f7;
+  justify-content: space-between;
+}
+
+.art h3 {
+  color: #B78B08;
+}
+
+.art p {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.art .content {
+  flex: 1;
+  max-width: 60%;
+}
+
+.art .card {
+  margin-right: 150px;
+  margin-top: 20px;
+  background-color: #ffffff;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 350px;
+  height: 230px;
+}
+
+.art .card h3 {
+  color: black !important;
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.art .card p {
+  font-size: 13px !important;
+  font-weight: 300 !important;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.art .card a {
+  color: #B78B08 !important;
+  text-decoration: none;
+}
+
+.arrow {
+  position: relative;
+  top: 3px;
+  right: 10px;
+  color: black;
+}
+
+.post-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.post-card {
+  background-color: #f7f7f7;
+  padding: 20px;
+  margin-bottom: 30px;
+  width: 48%;
+}
+
+.post-card h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.post-card a {
+  color: blue;
+  text-decoration: none;
+}
+
+.red-arrow {
+  font-size: 20px !important;
+  position: relative;
+  top: 5px;
+  left: 5px;
+  color: black !important;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination a,
+.pagination .ellipsis {
+  margin: 0 5px;
+  color: black;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.pagination .current-page {
+  margin: 0 5px;
+  color: #B78B08;
+  font-weight: bold;
+}
+
+.footer {
+  width: 100%;
+  background-color: #333;
+  color: #f9f9f9;
+  text-align: center;
+  font-size: 16px;
+  padding: 40px;
+}
+
+.subscribe-text {
+  font-size: 24px !important;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.subscribe-description {
+  font-size: 18px !important;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
+  color: #999;
+}
+
+.subscription-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.subscription-form .form-group {
+  margin-bottom: 20px;
+}
+
+.subscription-form input {
+  padding: 15px;
+  width: 400px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.subscription-form button {
+  padding: 15px 30px;
+  background-color: #B78B08;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: 'Arial', sans-serif;
+  cursor: pointer;
+}
+
+.subscription-form button:hover {
+  background-color: #916F00;
+}
+
+.subscription-form input::placeholder {
+  font-family: 'Arial', sans-serif;
+  color: #999;
+}
+
+.subscription-form input:focus {
+  outline: none;
+}
+
+.subscription-form button:focus {
+  outline: none;
+}
+
+.footer p {
+  margin-top: 40px;
+  font-size: 14px;
+  font-family: 'Arial', sans-serif;
+}
+
+.common{
+  padding : 100px ;
+}
+
+/* Media Queries */
+@media (max-width: 1150px) {
+  /* Your CSS rules for tablet screens */
+
+  .home{
+    height : auto;
+  }
+
+  .art {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .art .content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .art .card {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .home{
+    height : auto;
+  }
+
+  .art {
+    height: auto;
+    flex-direction: column;
+  }
+
+  .art .content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .art .card {
+    width: 100%;
+  }
+}
+
+
+
+@media (max-width: 480px) {
+  .subscribe-text {
+    font-size: 20px !important;
+  }
+
+  .subscribe-description {
+    font-size: 16px !important;
+  }
+
+  .subscription-form input {
+    width: 100%;
+  }
+
+  .navbar-nav li a {
+    font-size: 14px;
+  }
+
+  .navbar-brand {
+    max-width: 200px;
+  }
+
+  .home {
+    height: auto;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .art {
+    flex-direction: column;
+    height: auto;
+    padding-left: 20px;
+    padding-top: 20px;
+  }
+
+  .art .content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .art .card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .subscription-form button {
+    padding: 10px 20px;
+  }
+
+  .footer p {
+    margin-top: 20px;
+  }
+}
