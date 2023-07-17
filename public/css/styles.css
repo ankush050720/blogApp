@@ -296,52 +296,6 @@ html {
 
 /* Media Queries */
 @media (max-width: 1150px) {
-  /* Your CSS rules for tablet screens */
-
-  .home{
-    height : auto;
-  }
-
-  .art {
-    height: auto;
-    flex-direction: column;
-  }
-
-  .art .content {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .art .card {
-    width: 100%;
-  }
-}
-
-
-@media (max-width: 767px) {
-
-  .home{
-    height : auto;
-  }
-
-  .art {
-    height: auto;
-    flex-direction: column;
-  }
-
-  .art .content {
-    max-width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .art .card {
-    width: 100%;
-  }
-}
-
-
-
-@media (max-width: 480px) {
   .subscribe-text {
     font-size: 20px !important;
   }
